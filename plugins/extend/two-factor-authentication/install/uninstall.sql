@@ -1,0 +1,1 @@
+ALTER TABLE `sunlight_user` DROP `tfa_token`;

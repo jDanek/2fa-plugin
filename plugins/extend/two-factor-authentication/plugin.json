@@ -1,0 +1,26 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Two-Factor Authentication (2FA)",
+    "description": "Adds two-factor authentication to your site.",
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms"}
+    ],
+    "version": "0.9.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "class": "TwoFactorAuthenticationPlugin",
+    "installer": "install/installer.php",
+    "langs": {
+        "two-factor-authentication": "lang"
+    },
+    "events": [
+        {"event": "user.login.verified", "script": "event/user_login_verified.php"},
+        {"event": "user.login.form", "script": "event/user_login_form.php"},
+        {"event": "user.login.before", "script": "event/user_login_before.php"},
+        {"event": "user.login.message", "script": "event/user_login_message.php"}
+    ],
+    "events.web": [
+        {"event": "mod.settings.actions", "script": "event/mod_settings_actions.php"}
+    ]
+}

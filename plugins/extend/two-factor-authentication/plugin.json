@@ -22,5 +22,9 @@
     ],
     "events.web": [
         {"event": "mod.settings.actions", "script": "event/mod_settings_actions.php"}
+    ],
+    "events.admin": [
+        {"event": "admin.user.edit.before", "script": "event/admin/admin_user_edit_before.php"},
+        {"event": "admin.user.form", "script": "event/admin/admin_user_form.php"}
     ]
 }
